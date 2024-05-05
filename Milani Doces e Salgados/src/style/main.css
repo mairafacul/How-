@@ -1,0 +1,657 @@
+/* Define uma variável CSS para a cor amarela */
+:root {
+    --amarelo: #EAAF43;
+}
+
+/* Define estilos padrão para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+/* Define estilos específicos para o elemento html */
+html {
+    font-size: 62.5%; /* Define o tamanho da fonte base como 10px */
+    scroll-behavior: smooth; /* Adiciona suavização de rolagem */
+    scroll-padding-top: 6rem; /* Define o espaçamento superior para rolagem suave */
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+}
+
+/* Define estilos para elementos do tipo section */
+section {
+    padding: 2rem; /* Adiciona espaçamento interno de 2rem */
+    margin: 0 auto; /* Centraliza o elemento horizontalmente */
+    max-width: 1200px; /* Define a largura máxima */
+}
+
+/* Define estilos para o título principal */
+.heading {
+    text-align: center; /* Centraliza o texto */
+    font-size: 4rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    padding: 1rem; /* Adiciona espaçamento interno */
+    margin: 2rem 0; /* Adiciona espaçamento externo */
+    background: rgba(255, 51, 153, .05); /* Define um fundo com transparência */
+}
+
+/* Define estilos para o botão */
+.btn {
+    display: inline-block; /* Define como elemento em linha com bloco */
+    margin-top: 1rem; /* Adiciona margem superior */
+    border-radius: 5rem; /* Adiciona borda arredondada */
+    background: #333; /* Define a cor de fundo */
+    color: #fff; /* Define a cor do texto */
+    padding: 1rem 3rem; /* Adiciona espaçamento interno */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+    font-size: 1.8rem; /* Define o tamanho da fonte */
+}
+
+/* Define estilos para o botão ao passar o mouse por cima */
+.btn:hover {
+    background: var(--amarelo); /* Utiliza a variável de cor amarela definida anteriormente */
+}
+
+/* Define estilos para o cabeçalho */
+header {
+    position: fixed; /* Define como posicionamento fixo */
+    top: 0; /* Alinha o topo ao topo da janela */
+    left: 0; /* Alinha a esquerda ao lado esquerdo da janela */
+    right: 0; /* Alinha a direita ao lado direito da janela */
+    background: #fff; /* Define a cor de fundo */
+    z-index: 1000; /* Define a ordem de empilhamento */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1); /* Adiciona sombra */
+}
+
+/* Define estilos para a parte flexível do cabeçalho */
+header .flex {
+    display: flex; /* Define como flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+}
+
+/* Define estilos para o logotipo no cabeçalho */
+header .logo {
+    font-size: 3rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    font-weight: bolder; /* Define a espessura da fonte */
+}
+
+/* Define estilos para o logotipo no cabeçalho ao passar o mouse por cima */
+header .logo span {
+    color: var(--amarelo); /* Utiliza a variável de cor amarela definida anteriormente */
+}
+
+/* Define estilos para os links da navegação no cabeçalho */
+header .navbar a {
+    font-size: 2rem; /* Define o tamanho da fonte */
+    padding: 0 1.5rem; /* Adiciona espaçamento interno */
+    color: #666; /* Define a cor do texto */
+}
+
+/* Define estilos para os links da navegação no cabeçalho ao passar o mouse por cima */
+header .navbar a:hover {
+    color: var(--amarelo); /* Utiliza a variável de cor amarela definida anteriormente */
+}
+
+/* Define estilos para os ícones no cabeçalho */
+header .icons a {
+    font-size: 2.5rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    margin-left: 1.5rem; /* Adiciona margem à esquerda */
+}
+
+/* Define estilos para os ícones no cabeçalho ao passar o mouse por cima */
+header .icons a:hover {
+    color: var(--amarelo); /* Utiliza a variável de cor amarela definida anteriormente */
+}
+
+/* Define estilos para o botão de menu no cabeçalho */
+header #toggler {
+    display: none; /* Oculta o botão */
+}
+
+/* Define estilos para o ícone de menu no cabeçalho */
+header .fa-bars {
+    font-size: 3rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    border-radius: .5rem; /* Adiciona borda arredondada */
+    padding: .5rem 1.5rem; /* Adiciona espaçamento interno */
+    cursor: pointer; /* Altera o cursor ao passar por cima */
+    border: .1rem solid rgba(0, 0, 0, .3); /* Define uma borda sólida */
+    display: none; /* Oculta o ícone */
+}
+
+/* Define estilos para o container da seção principal */
+.home-container {
+    background: url(../images/home-bg.jpg) no-repeat; /* Define uma imagem de fundo */
+    background-size: cover; /* Ajusta o tamanho da imagem de fundo */
+    background-position: center; /* Centraliza a imagem de fundo */
+}
+
+/* Define estilos para a seção principal */
+.home {
+    display: flex; /* Define como flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    min-height: 100vh; /* Define a altura mínima */
+}
+
+/* Define estilos para o conteúdo da seção principal */
+.home .content {
+    max-width: 50rem; /* Define a largura máxima */
+}
+
+
+/* Define estilos para o título na seção principal */
+.home .content h3 {
+    font-size: 6rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Define estilos para o texto destacado na seção principal */
+.home .content span {
+    font-size: 3.5rem; /* Define o tamanho da fonte */
+    color: var(--amarelo); /* Utiliza a variável de cor amarela definida anteriormente */
+    padding: 1rem 0; /* Adiciona espaçamento interno */
+    line-height: 1.5; /* Define a altura da linha */
+}
+
+/* Define estilos para o parágrafo na seção principal */
+.home .content p {
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+    color: #666; /* Define a cor do texto */
+    padding: 1rem 0; /* Adiciona espaçamento interno */
+    line-height: 1.8; /* Define a altura da linha */
+}
+
+/* Define estilos para a seção sobre */
+.about .row {
+    display: flex; /* Define como flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    gap: 2rem; /* Define o espaçamento entre os itens */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    padding: 2rem 0; /* Adiciona espaçamento interno */
+    padding-bottom: 3rem; /* Adiciona espaçamento interno na parte inferior */
+}
+
+/* Define estilos para o container do vídeo na seção sobre */
+.about .row .video-container {
+    flex: 1 1 40rem; /* Define o tamanho flexível */
+    position: relative; /* Define como posicionamento relativo */
+}
+
+/* Define estilos para o vídeo na seção sobre */
+.about .row .video-container video {
+    width: 100%; /* Define a largura como 100% */
+    border: 1.5rem solid #fff; /* Adiciona uma borda sólida */
+    border-radius: .5rem; /* Adiciona borda arredondada */
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1); /* Adiciona sombra */
+    height: 100%; /* Define a altura como 100% */
+    object-fit: cover; /* Define como o vídeo deve ser redimensionado para preencher o contêiner */
+}
+
+/* Define estilos para o título no container do vídeo na seção sobre */
+.about .row .video-container h3 {
+    position: absolute; /* Define como posicionamento absoluto */
+    top: 50%; /* Alinha o topo ao centro */
+    transform: translateY(-50%); /* Move o elemento para cima */
+    font-size: 3rem; /* Define o tamanho da fonte */
+    background: #fff; /* Define a cor de fundo */
+    width: 100%; /* Define a largura como 100% */
+    padding: 1rem 2rem; /* Adiciona espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+    mix-blend-mode: screen; /* Define o modo de mistura */
+}
+
+/* Define estilos para o conteúdo na seção sobre */
+.about .row .content {
+    flex: 1 1 40rem; /* Define o tamanho flexível */
+}
+
+/* Define estilos para o título no conteúdo na seção sobre */
+.about .row .content h3 {
+    font-size: 3rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    padding-bottom: .5rem; /* Adiciona espaçamento interno na parte inferior */
+}
+
+/* Define estilos para o parágrafo no conteúdo na seção sobre */
+.about .row .content p {
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+    color: #999; /* Define a cor do texto */
+    padding: .5rem 0; /* Adiciona espaçamento interno */
+    padding-top: 1rem; /* Adiciona espaçamento interno na parte superior */
+    line-height: 1.8; /* Define a altura da linha */
+}
+
+/* Define estilos para o container de ícones */
+.icons-container {
+    background: #eee; /* Define a cor de fundo */
+    padding: 2rem 0; /* Adiciona espaçamento interno */
+}
+
+/* Define estilos para o container dos boxes de ícones */
+.icons-container .box-container {
+    display: flex; /* Define como flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 1.5rem; /* Define o espaçamento entre os itens */
+}
+
+/* Define estilos para o box de ícones */
+.icons-container .box-container .box {
+    background: #fff; /* Define a cor de fundo */
+    border: .1rem solid rgba(0, 0, 0, .1); /* Adiciona uma borda sólida */
+    padding: 2rem; /* Adiciona espaçamento interno */
+    display: flex; /* Define como flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    flex: 1 1 25rem; /* Define o tamanho flexível */
+}
+
+/* Define estilos para a imagem nos boxes de ícones */
+.icons-container .box-container .box img {
+    height: 5rem; /* Define a altura da imagem */
+    margin-right: 2rem; /* Adiciona margem à direita */
+}
+
+/* Define estilos para o título nos boxes de ícones */
+.icons-container .box-container .box h3 {
+    color: #333; /* Define a cor do texto */
+    padding-bottom: .5rem; /* Adiciona espaçamento interno na parte inferior */
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+}
+
+/* Define estilos para o texto nos boxes de ícones */
+.icons-container .box-container .box span {
+    color: #555; /* Define a cor do texto */
+    font-size: 1.3rem; /* Define o tamanho da fonte */
+}
+
+
+/* Define estilos para os boxes de ícones na seção de ícones */
+.icons-container .box-container .box {
+    background: #fff; /* Define a cor de fundo */
+    border: .1rem solid rgba(0, 0, 0, .1); /* Define uma borda sólida */
+    padding: 2rem; /* Adiciona espaçamento interno */
+    display: flex; /* Define como flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    flex: 1 1 25rem; /* Define o tamanho flexível */
+}
+
+/* Define estilos para as imagens nos boxes de ícones */
+.icons-container .box-container .box img {
+    height: 5rem; /* Define a altura da imagem */
+    margin-right: 2rem; /* Adiciona margem à direita */
+}
+
+/* Define estilos para os títulos nos boxes de ícones */
+.icons-container .box-container .box h3 {
+    color: #333; /* Define a cor do texto */
+    padding-bottom: .5rem; /* Adiciona espaçamento interno na parte inferior */
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+}
+
+/* Define estilos para os textos nos boxes de ícones */
+.icons-container .box-container .box span {
+    color: #555; /* Define a cor do texto */
+    font-size: 1.3rem; /* Define o tamanho da fonte */
+}
+
+/* Define estilos para o container de produtos */
+.products .box-container {
+    display: flex; /* Define como flexível */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
+    gap: 1.5rem; /* Define o espaçamento entre os itens */
+}
+
+/* Define estilos para os boxes de produtos */
+.products .box-container .box {
+    flex: 1 1 30rem; /* Define o tamanho flexível */
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1); /* Adiciona sombra */
+    border-radius: .5rem; /* Adiciona borda arredondada */
+    border: .1rem solid rgba(0, 0, 0, .1); /* Define uma borda sólida */
+    position: relative; /* Define como posição relativa */
+}
+
+/* Define estilos para a etiqueta de desconto nos boxes de produtos */
+.products .box-container .box .discount {
+    position: absolute; /* Define como posição absoluta */
+    top: 1rem; /* Define a distância do topo */
+    left: 1rem; /* Define a distância da esquerda */
+    padding: .7rem 1rem; /* Adiciona espaçamento interno */
+    font-size: 2rem; /* Define o tamanho da fonte */
+    color: var(--amarelo); /* Utiliza a variável de cor amarela definida anteriormente */
+    background: rgba(255, 51, 153, .05); /* Define a cor de fundo */
+    z-index: 1; /* Define a ordem de empilhamento */
+    border-radius: .5rem; /* Adiciona borda arredondada */
+}
+
+/* Define estilos para o contêiner de imagem nos boxes de produtos */
+.products .box-container .box .image {
+    position: relative; /* Define como posição relativa */
+    text-align: center; /* Alinha o texto ao centro */
+    padding-top: 2rem; /* Adiciona espaçamento interno no topo */
+    overflow: hidden; /* Esconde o conteúdo que transborda */
+}
+
+/* Define estilos para as imagens nos boxes de produtos */
+.products .box-container .box .image img {
+    height: 25rem; /* Define a altura da imagem */
+}
+
+/* Define estilos para as imagens nos boxes de produtos ao passar o mouse */
+.products .box-container .box:hover .image img {
+    transform: scale(1.1); /* Aplica um aumento de escala ao passar o mouse */
+}
+
+/* Define estilos para o contêiner de ícones na imagem nos boxes de produtos */
+.products .box-container .box .image .icons {
+    position: absolute; /* Define como posição absoluta */
+    bottom: -7rem; /* Define a distância do fundo */
+    left: 0; /* Alinha à esquerda */
+    right: 0; /* Alinha à direita */
+    display: flex; /* Define como flexível */
+}
+
+/* Define estilos para os ícones na imagem nos boxes de produtos ao passar o mouse */
+.products .box-container .box:hover .image .icons {
+    bottom: 0; /* Move os ícones para a parte inferior */
+}
+
+/* Define estilos para os links de ação na imagem nos boxes de produtos */
+.products .box-container .box .image .icons a {
+    height: 5rem; /* Define a altura */
+    line-height: 5rem; /* Define a altura da linha */
+    font-size: 2rem; /* Define o tamanho da fonte */
+    width: 50%; /* Define a largura */
+    background: var(--amarelo); /* Utiliza a variável de cor amarela definida anteriormente */
+    color: #fff; /* Define a cor do texto */
+}
+
+/* Define estilos para o botão de carrinho na imagem nos boxes de produtos */
+.products .box-container .box .image .icons .cart-btn {
+    border-left: .1rem solid #fff7; /* Adiciona uma borda esquerda */
+    border-right: .1rem solid #fff7; /* Adiciona uma borda direita */
+    width: 100%; /* Define a largura */
+}
+
+/* Define estilos para os links de ação na imagem nos boxes de produtos ao passar o mouse */
+.products .box-container .box .image .icons a:hover {
+    background: #333; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Define estilos para o conteúdo nos boxes de produtos */
+.products .box-container .box .content {
+    padding: 2rem; /* Adiciona espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+}
+
+/* Define estilos para os títulos nos boxes de produtos */
+.products .box-container .box .content h3 {
+    font-size: 2.5rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Define estilos para os preços nos boxes de produtos */
+.products .box-container .box .content .price {
+    font-size: 2.5rem; /* Define o tamanho da fonte */
+    color: var(--amarelo); /* Utiliza a variável de cor amarela definida anteriormente */
+    font-weight: bolder; /* Define a espessura da fonte */
+    padding-top: 1rem; /* Adiciona espaçamento interno no topo */
+}
+
+/* Define estilos para os preços de comparação nos boxes de produtos */
+.products .box-container .box .content .price span {
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+    color: #999; /* Define a cor do texto */
+    font-weight: lighter; /* Define a espessura da fonte */
+    text-decoration: line-through; /* Adiciona uma linha de decoração */
+}
+
+/* Define estilos para a seção de avaliações */
+.review .box-container {
+    display: flex; /* Utiliza um layout flexível */
+    flex-wrap: wrap; /* Permite que os itens sejam organizados em várias linhas */
+    gap: 1.5rem; /* Define o espaçamento entre os elementos */
+}
+
+/* Define estilos para os boxes de avaliação */
+.review .box-container .box {
+    flex: 1 1 30rem; /* Define a largura flexível dos boxes */
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1); /* Adiciona uma sombra */
+    border-radius: .5rem; /* Adiciona uma borda arredondada */
+    padding: 3rem 2rem; /* Adiciona espaçamento interno */
+    position: relative; /* Define uma posição relativa */
+    border: .1rem solid rgba(0,0,0,.1); /* Adiciona uma borda sólida */
+}
+
+/* Define estilos para o ícone de citação nas avaliações */
+.review .box-container .box .fa-quote-right {
+    position: absolute; /* Define uma posição absoluta */
+    bottom: 3rem; /* Define a distância do fundo */
+    right: 3rem; /* Define a distância da direita */
+    font-size: 6rem; /* Define o tamanho do ícone */
+    color: #eee; /* Define a cor do ícone */
+}
+
+/* Define estilos para as estrelas de avaliação */
+.review .box-container .box .stars i {
+    color: var(--amarelo); /* Utiliza a variável de cor amarela definida anteriormente */
+    font-size: 2rem; /* Define o tamanho das estrelas */
+}
+
+/* Define estilos para os textos nas avaliações */
+.review .box-container .box p {
+    color: #999; /* Define a cor do texto */
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+    line-height: 1.8; /* Define a altura da linha */
+    padding-top: 2rem; /* Adiciona espaçamento superior */
+}
+
+/* Define estilos para as informações do usuário nas avaliações */
+.review .box-container .box .user {
+    display: flex; /* Utiliza um layout flexível */
+    align-items: center; /* Alinha os itens verticalmente */
+    padding-top: 2rem; /* Adiciona espaçamento superior */
+}
+
+/* Define estilos para a imagem do usuário nas avaliações */
+.review .box-container .box .user img {
+    height: 6rem; /* Define a altura da imagem */
+    width: 6rem; /* Define a largura da imagem */
+    border-radius: 50%; /* Adiciona uma borda arredondada */
+    object-fit: cover; /* Redimensiona a imagem para cobrir o contêiner */
+    margin-right: 1rem; /* Adiciona margem à direita */
+}
+
+/* Define estilos para o nome do usuário nas avaliações */
+.review .box-container .box .user h3 {
+    font-size: 2rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+}
+
+/* Define estilos para o texto adicional do usuário nas avaliações */
+.review .box-container .box .user span {
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+    color: #999; /* Define a cor do texto */
+}
+
+/* Define estilos para a seção de contato */
+.contact .row {
+    display: flex; /* Utiliza um layout flexível */
+    flex-wrap: wrap-reverse; /* Permite que os itens sejam organizados em várias linhas, com a ordem invertida */
+    gap: 1.5rem; /* Define o espaçamento entre os elementos */
+    align-items: center; /* Alinha os itens verticalmente */
+}
+
+/* Define estilos para o formulário de contato */
+.contact .row form {
+    flex: 1 1 40rem; /* Define a largura flexível do formulário */
+    padding: 2rem 2.5rem; /* Adiciona espaçamento interno ao formulário */
+    box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1); /* Adiciona uma sombra */
+    border: .1rem solid rgba(0,0,0,.1); /* Adiciona uma borda sólida */
+    background: #fff; /* Define o fundo como branco */
+    border-radius: .5rem; /* Adiciona uma borda arredondada */
+}
+
+/* Define estilos para a imagem na seção de contato */
+.contact .row .image {
+    flex: 1 1 40rem; /* Define a largura flexível da imagem */
+}
+
+/* Define estilos para a imagem dentro da seção de contato */
+.contact .row .image img {
+    width: 100%; /* Define a largura da imagem como 100% do contêiner */
+}
+
+/* Define estilos para as caixas de entrada do formulário de contato */
+.contact .row form .box {
+    padding: 1rem; /* Adiciona espaçamento interno às caixas de entrada */
+    font-size: 1.7rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    text-transform: none; /* Desativa a transformação de texto */
+    border: .1rem solid rgba(0,0,0,.1); /* Adiciona uma borda sólida */
+    border-radius: .5rem; /* Adiciona uma borda arredondada */
+    margin: .7rem 0; /* Adiciona margem */
+    width: 100%; /* Define a largura como 100% */
+}
+
+/* Define estilos para as caixas de entrada do formulário quando estão em foco */
+.contact .row form .box:focus {
+    border-color: var(--amarelo); /* Altera a cor da borda ao receber foco */
+}
+
+/* Define estilos para a área de texto do formulário de contato */
+.contact .row form textarea {
+    height: 15rem; /* Define a altura da área de texto */
+    resize: none; /* Impede a redimensionamento da área de texto */
+}
+
+/* Define estilos para o contêiner dos boxes no rodapé */
+.footer .box-container {
+    display: flex; /* Utiliza um layout flexível */
+    flex-wrap: wrap; /* Permite que os itens sejam organizados em várias linhas */
+    gap: 1.5rem; /* Define o espaçamento entre os elementos */
+}
+
+/* Define estilos para os boxes no rodapé */
+.footer .box-container .box {
+    flex: 1 1 25rem; /* Define a largura flexível dos boxes */
+}
+
+/* Define estilos para os títulos nos boxes do rodapé */
+.footer .box-container .box h3 {
+    color: #333; /* Define a cor do texto */
+    font-size: 2.5rem; /* Define o tamanho da fonte */
+    padding: 1rem 0; /* Adiciona espaçamento interno */
+}
+
+/* Define estilos para os links nos boxes do rodapé */
+.footer .box-container .box a {
+    display: block; /* Transforma os links em blocos */
+    color: #666; /* Define a cor do texto */
+    font-size: 1.5rem; /* Define o tamanho da fonte */
+    padding: 1rem 0; /* Adiciona espaçamento interno */
+}
+
+/* Define estilos para os links nos boxes do rodapé quando estão em hover */
+.footer .box-container .box a:hover {
+    color: var(--amarelo); /* Altera a cor do texto ao passar o mouse */
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Define estilos para as imagens nos boxes do rodapé */
+.footer .box-container .box img {
+    margin-top: 1rem; /* Adiciona margem superior */
+}
+
+/* Define estilos para o crédito no rodapé */
+.footer .credit {
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 1.5rem; /* Adiciona espaçamento interno */
+    margin-top: 1.5rem; /* Adiciona margem superior */
+    padding-top: 2.5rem; /* Adiciona espaçamento superior */
+    font-size: 2rem; /* Define o tamanho da fonte */
+    color: #333; /* Define a cor do texto */
+    border-top: .1rem solid rgba(0,0,0,.1); /* Adiciona uma borda superior sólida */
+}
+
+
+/* Define estilos para o texto dentro do elemento <span> dentro da classe .credit no rodapé */
+.footer .credit span {
+    color: var(--amarelo); /* Define a cor do texto como a variável --amarelo */
+}
+
+/* Media queries para diferentes tamanhos de tela */
+
+/* Define estilos específicos quando a largura da tela é no máximo 991px */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%; /* Reduz o tamanho da fonte para 55% */
+    }
+
+    .home {
+        background-position: left; /* Define a posição do plano de fundo da classe .home para a esquerda */
+    }
+}
+
+/* Define estilos específicos quando a largura da tela é no máximo 768px */
+@media (max-width: 768px) {
+    header .fa-bars {
+        display: block; /* Exibe o ícone de barras no cabeçalho */
+    }
+
+    header .navbar {
+        position: absolute; /* Posiciona a barra de navegação absolutamente */
+        top: 100%; /* Define a distância superior */
+        left: 0; /* Define a distância da esquerda */
+        right: 0; /* Define a distância da direita */
+        background: #eee; /* Define o plano de fundo como cinza claro */
+        border-top: .1rem solid rgba(0, 0, 0, .1); /* Adiciona uma borda superior sólida */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Define uma forma para o clip-path */
+    }
+
+    header #toggler:checked ~ .navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%); /* Altera o clip-path quando o toggle está marcado */
+    }
+
+    header .navbar a {
+        margin: 1.5rem; /* Define a margem */
+        padding: 1.5rem; /* Define o preenchimento */
+        background: #fff; /* Define o plano de fundo como branco */
+        border: .1rem solid rgba(0, 0, 0, .1); /* Adiciona uma borda sólida */
+        display: block; /* Transforma os links em blocos */
+    }
+
+    .home .content h3 {
+        font-size: 5rem; /* Define o tamanho da fonte */
+    }
+
+    .home .content span {
+        font-size: 2.5rem; /* Define o tamanho da fonte */
+    }
+
+    .icons-container .icons h3 {
+        font-size: 2rem; /* Define o tamanho da fonte */
+    }
+
+    .icons-container .icons span {
+        font-size: 1.7rem; /* Define o tamanho da fonte */
+    }
+}
+
+/* Define estilos específicos quando a largura da tela é no máximo 450px */
+@media (max-width: 450px) {
+    html {
+        font-size: 50%; /* Reduz o tamanho da fonte para 50% */
+    }
+
+    .heading {
+        font-size: 3rem; /* Define o tamanho da fonte */
+    }
+}
